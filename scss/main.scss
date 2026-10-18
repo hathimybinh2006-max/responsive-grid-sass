@@ -1,0 +1,14 @@
+// main.scss - Entry point cho SASS tái cấu trúc Responsive Grid
+
+// 1. Abstracts (Biến và Mixins)
+@forward "abstracts/variables";
+@forward "abstracts/mixins";
+
+// 2. Base (Reset, Typography toàn cục)
+@use "base/reset";
+
+// 3. Layout (Hệ thống Grid)
+@use "layout/grid";
+
+// 4. Components (Widgets và Blocks)
+@use "components/widgets";

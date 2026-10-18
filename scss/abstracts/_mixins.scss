@@ -1,0 +1,21 @@
+// abstracts/_mixins.scss
+@use "variables" as *;
+
+// Mixin tính toán độ rộng của cột dựa trên số cột trong hệ thống 12 cột
+@mixin col-width($col-span) {
+  width: ($col-span / $grid-columns) * 100%;
+}
+
+// Mixin tạo khối nội dung
+@mixin block-style($bg-color: $color-primary, $height: 100%, $margin-bottom: 0) {
+  background-color: $bg-color;
+  border: none;
+  width: 100%;
+  height: $height;
+  margin-bottom: $margin-bottom;
+}
+
+// Mixin cho wrapper
+@mixin wrapper-height($height) {
+  height: $height;
+}

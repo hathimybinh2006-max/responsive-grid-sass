@@ -1,0 +1,93 @@
+// layout/_grid.scss
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Lớp bao ngoài định vị absolute cho layout chính
+.layout-overlay {
+  position: absolute;
+  opacity: 0.9;
+  width: auto;
+  left: 8px;
+  right: 10px;
+}
+
+// Container chính
+.gridcontainer {
+  width: 100%;
+
+  // Lưới hướng dẫn nền mờ phía dưới
+  &--guide {
+    opacity: 0.1;
+  }
+}
+
+// Wrapper của từng hàng
+.gridwrapper {
+  overflow: auto;
+  position: relative;
+  height: 250px;
+
+  &--header {
+    height: $height-header;
+  }
+
+  &--main {
+    height: $height-main;
+  }
+
+  &--footer {
+    height: $height-footer;
+  }
+
+  &--guide {
+    height: $height-guide;
+  }
+}
+
+// Cột cơ sở (1/12 cột = 8.33%)
+.gridcontent {
+  width: (1 / $grid-columns) * 100%; // 8.333%
+  margin: 0;
+  border-right: 1px solid $color-border-default;
+  height: 100%;
+  float: left;
+  background-color: $color-bg-light;
+
+  // Header full width
+  &--header {
+    width: 100%;
+    background-color: $color-header;
+    border-right-color: transparent;
+  }
+
+  // Footer full width
+  &--footer {
+    width: 100%;
+    background-color: $color-footer;
+    border-right-color: transparent;
+  }
+
+  // Sidebar bên trái & bên phải chiếm 25% (3/12 cột)
+  &--sidebar {
+    background-color: $color-white;
+    border: none;
+    @include col-width(3); // 25%
+    padding-top: 15px;
+  }
+
+  // Cột trống ở giữa
+  &--empty {
+    background-color: $color-white;
+    border: none;
+  }
+
+  // Cột trong lưới hướng dẫn
+  &--guide-col {
+    background-color: $color-white;
+    border-right: 1px solid $color-border-guide;
+
+    &:first-child {
+      border-left: 1px solid $color-border-guide;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// components/_widgets.scss
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Menu items hoặc widget khối nằm trong sidebar
+.widget-item {
+  @include block-style($bg-color: $color-primary, $height: 15%, $margin-bottom: 10px);
+
+  &--last {
+    margin-bottom: 0;
+  }
+
+  &--full {
+    height: 92%;
+    margin-bottom: 0;
+  }
+}

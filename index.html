@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid - SASS Refactored</title>
+    <!-- Nhúng file CSS đã được biên dịch từ SASS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Lớp layout chính được tái cấu trúc class thay vì inline styles -->
+    <div class="layout-overlay">
+        <div class="gridcontainer">
+            <!-- Header Row -->
+            <div class="gridwrapper gridwrapper--header">
+                <div class="gridcontent gridcontent--header"></div>
+            </div>
+
+            <!-- Main Content Row -->
+            <div class="gridwrapper gridwrapper--main">
+                <!-- Sidebar trái: 3/12 cột = 25% -->
+                <div class="gridcontent gridcontent--sidebar">
+                    <div class="widget-item"></div>
+                    <div class="widget-item"></div>
+                    <div class="widget-item"></div>
+                    <div class="widget-item widget-item--last"></div>
+                </div>
+
+                <!-- 6 cột trống ở giữa -->
+                <div class="gridcontent gridcontent--empty"></div>
+                <div class="gridcontent gridcontent--empty"></div>
+                <div class="gridcontent gridcontent--empty"></div>
+                <div class="gridcontent gridcontent--empty"></div>
+                <div class="gridcontent gridcontent--empty"></div>
+                <div class="gridcontent gridcontent--empty"></div>
+
+                <!-- Sidebar phải: 3/12 cột = 25% -->
+                <div class="gridcontent gridcontent--sidebar">
+                    <div class="widget-item widget-item--full"></div>
+                </div>
+            </div>
+
+            <!-- Footer Row -->
+            <div class="gridwrapper gridwrapper--footer">
+                <div class="gridcontent gridcontent--footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hệ thống 12 cột làm lưới hướng dẫn phía sau (Guide Grid) -->
+    <div class="gridcontainer gridcontainer--guide">
+        <div class="gridwrapper gridwrapper--guide">
+            <div class="gridcontent gridcontent--guide-col"></div>
+            <div class="gridcontent gridcontent--guide-col"></div>
+            <div class="gridcontent gridcontent--guide-col"></div>
+            <div class="gridcontent gridcontent--guide-col"></div>
+            <div class="gridcontent gridcontent--guide-col"></div>
+            <div class="gridcontent gridcontent--guide-col"></div>
+            <div class="gridcontent gridcontent--guide-col"></div>
+            <div class="gridcontent gridcontent--guide-col"></div>
+            <div class="gridcontent gridcontent--guide-col"></div>
+            <div class="gridcontent gridcontent--guide-col"></div>
+            <div class="gridcontent gridcontent--guide-col"></div>
+            <div class="gridcontent gridcontent--guide-col"></div>
+        </div>
+    </div>
+
+    <p class="notice-text">
+        Resize the browser window to see that this grid will respond to the resizing, and always use 100% of the available space.
+    </p>
+
+</body>
+</html>
